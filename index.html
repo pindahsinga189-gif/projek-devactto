@@ -1,0 +1,261 @@
+<!DOCTYPE1 html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMR - Palang Merah Remaja</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Navbar */
+        header {
+            background-color: #b71c1c;
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffcdd2;
+        }
+        .hero {
+            background: linear-gradient(rgba(183, 28, 28, 0.85), rgba(183, 28, 28, 0.85)), 
+                        url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #b71c1c;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #ffebee;
+            transform: translateY(-2px);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #b71c1c;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #b71c1c;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 4px solid #b71c1c;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #b71c1c;
+            margin-bottom: 10px;
+        }
+        .principles-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+        }
+
+        .principles-list li {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .badge {
+            background: #ffebee;
+            color: #b71c1c;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        footer {
+            background-color: #212121;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span>➕</span> PMR Unit Sekolah
+            </div>
+            <ul class="nav-links">
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kegiatan">Kegiatan</a></li>
+                <li><a href="#prinsip">7 Prinsip</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Siamo Tutti Fratelli!</h1>
+        <p>Kita Semua Adalah Bersaudara. Bergabunglah bersama Palang Merah Remaja untuk melatih kepedulian, pertolongan pertama, dan jiwa kemanusiaan.</p>
+        <a href="#tentang" class="btn">Pelajari Lebih Lanjut</a>
+    </section>
+
+    <div class="container">
+        <section id="tentang">
+            <h2>Tentang PMR</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555;">
+                Palang Merah Remaja (PMR) adalah wadah pembinaan dan pengembangan anggota remaja PMI. Melalui PMR, siswa dilatih keterampilan pertolongan pertama, kesiapsiagaan bencana, serta kepemimpinan berbudi pekerti luhur.
+            </p>
+        </section>
+        <section id="kegiatan">
+            <h2>Kegiatan Utama</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🚑 Pertolongan Pertama</h3>
+                    <p>Mempelajari teknik penanganan darurat kecelakaan, pembidaian, pembalutan, dan evakuasi korban.</p>
+                </div>
+                <div class="card">
+                    <h3>🏥 Bakti Masyarakat</h3>
+                    <p>Kegiatan sosial seperti donor darah, penyuluhan kesehatan lingkungan, dan aksi kepedulian sesama.</p>
+                </div>
+                <div class="card">
+                    <h3>⛺ Latihan Bersama & Jumpa Bakti</h3>
+                    <p>Mengasah keterampilan, mempererat persahabatan antarunit, dan pelatihan kedisiplinan di alam terbuka.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7 Prinsip -->
+        <section id="prinsip">
+            <h2>7 Prinsip Dasar PMR</h2>
+            <ul class="principles-list">
+                <li><span class="badge">1</span> Kemanusiaan</li>
+                <li><span class="badge">2</span> Kesamaan</li>
+                <li><span class="badge">3</span> Kenetralan</li>
+                <li><span class="badge">4</span> Kemandirian</li>
+                <li><span class="badge">5</span> Kesukarelaan</li>
+                <li><span class="badge">6</span> Kesatuan</li>
+                <li><span class="badge">7</span> Kesemestaan</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 PMR Unit Sekolah. Dibuat untuk Kemanusiaan.</p>
+    </footer>
+
+</body>
+</html>
